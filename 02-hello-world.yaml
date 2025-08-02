@@ -1,0 +1,5 @@
+- name: hello world
+  host: local
+  connection: local # when set to local no need of U nam and password, only when u connect servers other than loca need Un and Passwd
+  tasks:
+  - print hello world
