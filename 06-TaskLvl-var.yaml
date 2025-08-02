@@ -11,3 +11,7 @@
         COURSE: Ansible
       ansible.builtin.debug:
         msg: "Hello {{ COURSE }} course for {{ DURATION }} by {{ TRAINER }}"
+   
+    - name: print info again
+      ansible.builtin.debug:
+        msg: "Hello {{ COURSE }} course for {{ DURATION }} by {{ TRAINER }}"
