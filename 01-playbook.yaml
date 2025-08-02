@@ -1,10 +1,11 @@
 - name: ping the server
   hosts: frontend
-  tasks: # list of tasks
-  - name: ping the server
-    ansible.builtin.ping:
+  become: true
+  tasks:
+    - name: ping the server
+      ansible.builtin.ping:
 
-  - name: install nginx
-    ansible.builtin.yum:
-      name: nginx
-      state: present
+    - name: install nginx
+      ansible.builtin.yum:
+        name: nginx
+        state: present
