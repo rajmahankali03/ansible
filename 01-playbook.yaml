@@ -1,4 +1,4 @@
-- name: ping the server
+- name: ping the servers
   hosts: frontend
   tasks: # list of tasks
   - name: ping the server
