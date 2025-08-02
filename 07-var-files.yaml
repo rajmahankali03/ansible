@@ -7,7 +7,4 @@
     - name: print info
       ansible.builtin.debug:
         msg: "Hello {{ COURSE }} course for {{ DURATION }} by {{ TRAINER }}"
-
-    - name: print again
-      ansible.builtin.debug:
-        msg: "Hello {{ COURSE }} course for {{ DURATION }} by {{ TRAINER }}"
+  
