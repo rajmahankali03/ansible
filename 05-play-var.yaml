@@ -11,7 +11,7 @@
       #var reference should be surrounded by {{ }}
         msg: "Hello {{ COURSE }} course for {{ DURATION }} by {{ TRAINER }}"
 
-- name: print again
-  ansible.builtin.debug:  
-       #var reference should be surrounded by {{ }}
-   msg: "Hello {{ COURSE }} course for {{ DURATION }} by {{ TRAINER }}"
+    - name: print again
+      ansible.builtin.debug:
+      #var reference should be surrounded by {{ }}
+        msg: "Hello {{ COURSE }} course for {{ DURATION }} by {{ TRAINER }}"
