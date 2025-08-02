@@ -2,4 +2,7 @@
   host: local
   connection: local # when set to local no need of U nam and password, only when u connect servers other than loca need Un and Passwd
   tasks:
-  - print hello world
+  - name: print hello world
+    ansible.builtin.debug:
+      msg: "Hello world"
+      
