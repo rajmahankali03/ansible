@@ -1,0 +1,24 @@
+- name: variables from inventory
+  hosts: local
+  connection: local
+  tasks:
+    - name: print info
+      ansible.builtin.debug:
+        msg: "Hello {{ COURSE }} course for {{ DURATION }} by {{ TRAINER }}"
+  vars:
+    COURSE: DevOps with AWS   # This variable can be set in the inventory file
+    DURATION: 5 days                  
+    TRAINER: Siva                   # This variable can be set in the inventory file
+    # These variables can also be defined in the inventory file under the group or host variables
+    # For example, in the inventory file:
+    [local]
+    ansible_host=localhost
+    ansible_connection=local
+    COURSE=DevOps with AWS
+    DURATION=5 days
+    TRAINER=Siva      
+    # This allows you to manage variables directly in the inventory, making it easier to maintain configurations across different environments.
+    # This is useful for dynamic inventory setups or when you want to keep your playbooks clean and focused on tasks rather than variable definitions.
+    # You can also use group_vars or host_vars directories to manage variables for specific groups or hosts in your inventory.
+    # For example, you can create a file named group_vars/local.yml with the following content:
+    
