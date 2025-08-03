@@ -1,0 +1,6 @@
+- name: gathering facts
+  hosts: local
+  tasks:
+    - name: printing facts
+      ansible.builtin.debug:
+      msg: "The ansible_facts variable contains all the gathered facts: {{ ansible_facts }}"
