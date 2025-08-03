@@ -2,7 +2,7 @@
   hosts: frontend
   become: yes # sudo access
   tasks:
-    - name: install nginx is redhat
+    - name: install nginx if redhat
       ansible.builtin.dnf:      # Install nginx server 
         name: nginx
         state: present
