@@ -1,0 +1,16 @@
+- name: loops
+  hosts: local
+  connection: local
+  tasks:
+  - name: print message for each item in the list
+    ansible.builtin.debug:
+      msg: "eat {{ item }}"
+    loop:
+      - apple
+      - banana
+      - cherry
+
+  - name: print numbers from 1 to 5
+    ansible.builtin.debug:
+      msg: "Number: {{ item }}"
+    loop: "{{ range(1, 6) | list }}"
