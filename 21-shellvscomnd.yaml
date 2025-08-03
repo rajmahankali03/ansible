@@ -1,0 +1,8 @@
+- name: shell vs command
+  hosts: frontend
+  tasks:
+  - name: using shell to run a command to redirect output
+    ansible.builtin.shell: "echo 'Hello from shell' > /tmp/shell_output.txt"
+
+  - name: using command to run a command
+    ansible.builtin.command: "echo 'Hello from command'"
